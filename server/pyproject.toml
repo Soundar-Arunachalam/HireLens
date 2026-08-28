@@ -1,6 +1,6 @@
 [project]
 name = "codeeditor-server"
-version = "0.1.0"
+version = "0.2.0"
 description = "FastAPI backend for a LeetCode-style application"
 requires-python = ">=3.13"
 dependencies = [
@@ -11,6 +11,10 @@ dependencies = [
   "pydantic-settings>=2.10.1",
   "sqlalchemy>=2.0.43",
   "psycopg[binary]>=3.2.9",
+  "PyJWT>=2.9.0",
+  "passlib[bcrypt]>=1.7.4",
+  "bcrypt>=4.0.0,<4.1",
+  "python-multipart>=0.0.9",
 ]
 
 [tool.pytest.ini_options]

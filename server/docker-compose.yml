@@ -23,11 +23,28 @@ services:
         condition: service_healthy
     environment:
       DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/codeeditor
-      APP_NAME: LeetCode Clone API
-      APP_VERSION: 0.1.0
+      APP_NAME: CodeEditor API
+      APP_VERSION: 0.2.0
+      FRONTEND_ORIGIN: http://localhost:3000
+      SECRET_KEY: change-me-to-a-long-random-secret-in-production
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 10080
     ports:
       - "8000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     command: ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  frontend:
+    build:
+      context: ../client
+    depends_on:
+      app:
+        condition: service_started
+    environment:
+      - BACKEND_URL=http://app:8000
+    ports:
+      - "3000:80"
 
 volumes:
   postgres_data:
