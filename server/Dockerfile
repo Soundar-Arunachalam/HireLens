@@ -14,6 +14,7 @@ COPY pyproject.toml uv.lock ./
 COPY app ./app
 COPY tests ./tests
 COPY migrate.py ./
+COPY seed_problems.py ./
 
 RUN uv sync --frozen --no-dev
 
