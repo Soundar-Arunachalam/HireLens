@@ -41,4 +41,4 @@ def on_startup() -> None:
 
 @app.get("/", tags=["root"])
 def root() -> dict[str, str]:
-    return {"message": "CodeEditor API is running", "version": settings.app_version}
+    return {"message": "Hirelens API is running", "version": settings.app_version}

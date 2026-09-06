@@ -1,6 +1,6 @@
-# FastAPI Server
+# Hirelens Server
 
-Minimal FastAPI backend scaffold for a LeetCode-like application.
+Minimal FastAPI backend scaffold for the Hirelens application.
 
 ## Run locally
 

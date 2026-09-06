@@ -23,7 +23,7 @@ services:
         condition: service_healthy
     environment:
       DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/codeeditor
-      APP_NAME: CodeEditor API
+      APP_NAME: Hirelens API
       APP_VERSION: 0.2.0
       FRONTEND_ORIGIN: http://localhost:3000
       SECRET_KEY: change-me-to-a-long-random-secret-in-production

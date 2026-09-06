@@ -15,7 +15,7 @@ def test_root_returns_status_message(client: TestClient) -> None:
 
     assert response.status_code == 200
     data = response.json()
-    assert data["message"] == "CodeEditor API is running"
+    assert data["message"] == "Hirelens API is running"
     assert "version" in data
 
 

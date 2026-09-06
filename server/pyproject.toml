@@ -1,5 +1,5 @@
 [project]
-name = "codeeditor-server"
+name = "hirelens-server"
 version = "0.2.0"
 description = "FastAPI backend for a LeetCode-style application"
 requires-python = ">=3.13"
